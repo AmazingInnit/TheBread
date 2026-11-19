@@ -1,45 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>TheBread Page</title>
+    
     <style>
-        /*BACKGROUND FONT*/
+        /*BACKGROUND*/
         body 
         {
-            background-color: #fdf6ec;
-            font-family: Arial, sans-serif; 
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #221a13;
+            font-family: sans-serif; 
             text-align: center;
-            margin: 20px 20px;
         }
-        /*HEADING*/
-        h1 
+        nav
         {
-            color: #d97724;
+            text-align: right;
+            padding: 10px 16px 0;
         }
-        /*BUTTON*/
-        button 
+        .nav
         {
-            background-color: #d97724;
+            background-color: #604917;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 8px 20px;
+            font-family: sans-serif;
+            font-size: 15px;
+            border-radius: 4px; 
+            margin-top: 10px; 
+            margin-bottom: 10px; 
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        h1 
+        {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 45px;
+            color: #fff6e5;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        h2
+        {
+            margin-top: 40px;
+            font-family: 'Times New Roman', Times, serif;
             font-size: 20px;
+            color: #f5ebd6;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+        }
+        h3
+        {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+            color: #f5ebd6;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+            margin-top: 0;
+            margin-bottom: 6px;
+        }
+        button:hover 
+        {
+            background-color: #52270b; 
+        }
+        p 
+        {
+            color: #e8dcc4;
+            font-family: sans-serif;
+            font-size: 15px;
+            margin-top: 6px;
+            margin-bottom: 8px;
+        }
+        .soap_block
+        {
+            text-align: left;
+            margin-top: 14px;
+        }
+        .soap_label
+        {
+            font-weight: normal;
+            color: #fff6e5;
+            font-family: sans-serif;
+            font-size: 15px;
+            margin-top: 0;
+            margin-bottom: 6px;
+            text-align: left;
+        }
+        textarea
+        {
+            width: 100%;
+            box-sizing: border-box;
+            min-height: 110px;
+            padding: 10px 12px;
+            font-family: sans-serif;
+            font-size: 15px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 210, 145, 0.4);
+            background-color: #fff8eb;
+            color: #3b2412;
+            resize: vertical;
+        }
+        .button
+        {
+            background-color: #718328;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            font-family: sans-serif;
+            font-size: 15px;
+            border-radius: 6px;
+            width: 180px;
+            margin-top: 18px;
+            cursor: pointer;
+        }
+        .button:hover
+        {
+            background-color: #565124;
+        }
+        .background_img
+        {
+            position: fixed;
+            inset: 0;             
+            width: 100%;
+            height: 100%;
+            object-fit: cover;    
+            object-position: center;
+            z-index: -1;           
+            pointer-events: none;
+        }
+        .stage 
+        {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 24px 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* The rectangle in the middle */
+        .rectangle 
+        {
+            width: 92vw;
+            max-width: 1200px;
+            min-height: 72vh;
+            padding: 24px 28px;
+            box-sizing: border-box;
+            background: rgba(34, 26, 19, 0.78);
+            backdrop-filter: blur(1px);
+            border: 1px solid rgba(255, 210, 145, 0.25);
+            border-radius: 8px;  
+        }
+        footer p
+        {
+            color: #fff6e5;
+            font-family: sans-serif;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
+   
     <header>
- <h1>
-   TheBread Page
- </h1>
-        <img src="c:\Users\miedy\Downloads\Bread.jpg" height="150px" />       
+        <nav>
+            <a href="TheBread Page.html"><button class="nav">TheBread Page</button></a>
+            <a href="TheBread.html"><button class="nav">About Us</button></a>
+        </nav>
+    </header>
 
-</header>
-    
-        <div class=""> 
-                <li><a href="TheBread.html"><button>Back</button></a></li>
+    <div class="stage">
+        <h1>TheBread</h1>
+        <div class="rectangle">
+            <h3>Daily Devotion</h3>
+            <p>- my sheep knows my voice.</p>
+
+            <div class="soap_block">
+                <p class="soap_label">S - Scripture</p>
+                <textarea></textarea>
+            </div>
+
+            <div class="soap_block">
+                <p class="soap_label">O - Observation</p>
+                <textarea></textarea>
+            </div>
+
+            <div class="soap_block">
+                <p class="soap_label">A - Application</p>
+                <textarea></textarea>
+            </div>
+
+            <div class="soap_block">
+                <p class="soap_label">P - Prayer</p>
+                <textarea></textarea>
+            </div>
+
+            <a href="TheBread.html"><button class="button">Save</button></a>
         </div>
-    </body>
-</body>
+    </div>
 
+    <img src="TheBread BG.png" alt="Background image" class="background_img"/>
+
+    <footer>
+        <p>&copy; 2026 TheBread. All rights reserved.</p>
+    </footer>
+</body>
 </html>
